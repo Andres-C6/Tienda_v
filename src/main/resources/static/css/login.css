@@ -1,9 +1,29 @@
-/*
-Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
-Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to edit this template
-*/
-/* 
-    Created on : Feb 1, 2022, 6:38:54 PM
-    Author     : ancar
-*/
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Supermercado+One&display=swap');
 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+    font-family: 'Poppins', sans-serif;
+    
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background:linear-gradient(120deg,#65098C,#E6B8FA);
+    height: 100vh;
+    overflow: hidden;
+    
+}
+
+.content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 10px 10px 15px rgba(0,0,0,0,5);
+    
+}
