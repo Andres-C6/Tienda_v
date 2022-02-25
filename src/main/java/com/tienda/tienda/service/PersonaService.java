@@ -19,4 +19,18 @@ public class PersonaService implements IPersonaService{
     return (List<Persona>)personaRepository.findAll();
     }
     
+    @Override 
+    public void savePerson (Persona persona){
+    personaRepository.save(persona);
+    }
+    
+    @Override
+    public Persona getPersonById(long id){
+    return persona.Repository.findById(id).orElse(null);
+    
+    }
+    
+    @Override public void delete(long id){
+    personaRepository.deleteById(id);
+    }
 }
