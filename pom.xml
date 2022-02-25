@@ -9,17 +9,17 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.tienda</groupId>
-    <artifactId>tienda</artifactId>
+    <artifactId>Tienda</artifactId>
     <version>1</version>
-    <name>tienda</name>
-    <description>Proyecto hecho en clase de Web y patrones</description>
+    <name>Tienda</name>
+    <description>Proyecto hecho en clase</description>
     <properties>
         <java.version>17</java.version>
     </properties>
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-thymeleaf</artifactId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
         </dependency>
         <dependency>
             <groupId>mysql</groupId>
@@ -28,8 +28,14 @@
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-thymeleaf</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
+
+
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -47,13 +53,9 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-data-jpa</artifactId>
-            <version>2.6.3</version>
-            <type>module</type>
-        </dependency>
     </dependencies>
+
+
 
     <build>
         <plugins>
@@ -71,5 +73,7 @@
             </plugin>
         </plugins>
     </build>
+
+
 
 </project>

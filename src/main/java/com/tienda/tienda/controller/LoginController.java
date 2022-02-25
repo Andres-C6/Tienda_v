@@ -9,7 +9,7 @@ public class LoginController {
     
     @GetMapping({"/", "/perro"})
     public String index() {
-        log.info("sfedkf");
+        //log.info("sfedkf");
         return "login";
     }
     
