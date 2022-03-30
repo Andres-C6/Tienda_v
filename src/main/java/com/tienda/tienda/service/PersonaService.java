@@ -1,12 +1,12 @@
 
 package com.tienda.tienda.service;
 
-import java.util.list;
-import java.util.Optional;
-import com.tienda.tienda.service.IPersonaService;
+import java.util.List;
+
 import com.tienda.tienda.repository.PersonaRepository;
 import org.springframework.stereotype.Service;
 import org.springframework.beans.factory.annotation.Autowired;
+import com.tienda.tienda.entity.Persona;
 
 @Service
 public class PersonaService implements IPersonaService{
@@ -26,7 +26,7 @@ public class PersonaService implements IPersonaService{
     
     @Override
     public Persona getPersonById(long id){
-    return persona.Repository.findById(id).orElse(null);
+    return personaRepository.findById(id).orElse(null);
     
     }
     
