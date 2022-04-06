@@ -16,14 +16,14 @@ import org.springframework.stereotype.Service;
  *
  * @author ancar
  */
-
 @Service
-public class PaisService implements IPaisService{
+public class PaisService implements IPaisService {
+
     @Autowired
     private PaisRepository paisRepository;
-    
+
     @Override
-    public List<Pais> listCountry(){
+    public List<Pais> listCountry() {
         return (List<Pais>) paisRepository.findAll();
     }
 }
