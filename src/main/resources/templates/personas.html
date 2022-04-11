@@ -17,13 +17,29 @@
                     <th scope="col">Email</th>
                     <th scope="col">Telefono</th>
                     <th scope="col">Eliminar</th>
-                    
+
                 </tr>
-                
+
             </thead>
-            
-        </table>
-        
-        
-    </body>
+            <tbody>
+            <th:block th:each="user : $(personas)">
+                <tr>
+                    <td th:text="${user.getNombre}"></td>
+                    <td th:text="${user.getApellido1}"></td>
+                    <td th:text="${user.getApellido2}"></td>
+                    <td th:text="${user.getEmail}"></td>
+                    <td th:text="${user.getTelefono}"></td>
+                    <td>
+                        <a th:href="@{/delete/(id)(id=$(user.getId))}">Delete</a>
+                    </td>
+
+                </tr>
+            </th:block>
+
+        </tbody>
+
+    </table>
+
+
+</body>
 </html>
