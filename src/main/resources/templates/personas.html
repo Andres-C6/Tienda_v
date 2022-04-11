@@ -7,7 +7,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
-        <h1 th:text="$(titulo)"></h1>
+        <h1 th:text="${titulo}"></h1>
         <table>
             <thead class="thread-dark">
                 <tr>
@@ -22,7 +22,7 @@
 
             </thead>
             <tbody>
-            <th:block th:each="user : $(personas)">
+            <th:block th:each="user : ${personas}">
                 <tr>
                     <td th:text="${user.getNombre}"></td>
                     <td th:text="${user.getApellido1}"></td>
@@ -30,7 +30,7 @@
                     <td th:text="${user.getEmail}"></td>
                     <td th:text="${user.getTelefono}"></td>
                     <td>
-                        <a th:href="@{/delete/(id)(id=$(user.getId))}">Delete</a>
+                        <a th:href="@{/delete/{id}(id=${user.getId})}">Delete</a>
                     </td>
 
                 </tr>

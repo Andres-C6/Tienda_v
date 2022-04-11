@@ -25,11 +25,27 @@ public class PersonaController {
         return "personas";
     }
     
+    @GetMapping("/nuevaPersona")
+    public String nuevaPersona(Persona persona) {
+        return "modificarPersona";
+    }
+    
+    
+    /*
+    @GetMapping("/modificarPersona/{idPersona}")
+    public String modificarPersona(Persona persona, Model model) {
+        persona = personaService.getPersonById(persona);
+        model.addAttribute("persona", persona);
+        return "modificarPersona";
+    }
+*/
+    
     
     @GetMapping("/personasN")
     public String crearPersona(Model model) {
         model.addAttribute("personas",new Persona());
         //persona.Service.savePerson(persona);
+        //return "modificarPersona";
         return "crear";
     }
     
@@ -42,7 +58,7 @@ public class PersonaController {
     @GetMapping("/delete/{id}")
     public String eliminarPersona(@PathVariable("id")Long idPersona) {
         personaService.delete(idPersona);
-        return "crear";
+        return "redirect:/persona";
     }
     
 }
