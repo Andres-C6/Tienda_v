@@ -29,6 +29,10 @@
                     <td th:text="${user.getApellido2}"></td>
                     <td th:text="${user.getEmail}"></td>
                     <td th:text="${user.getTelefono}"></td>
+                    <td th:text="${user.getPais.getPais}"></td>
+                    <td>
+                        <a th:href="@{/editPersona/{id}(id=${user.getId})}">Edit</a>
+                    </td>
                     <td>
                         <a th:href="@{/delete/{id}(id=${user.getId})}">Delete</a>
                     </td>
