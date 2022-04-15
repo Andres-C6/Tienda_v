@@ -1,6 +1,8 @@
 package com.tienda.tienda.controller;
 
+import com.tienda.tienda.entity.Pais;
 import com.tienda.tienda.entity.Persona;
+import com.tienda.tienda.service.IPaisService;
 import com.tienda.tienda.service.IPersonaService;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,6 +18,8 @@ public class PersonaController {
 
     @Autowired
     private IPersonaService personaService;
+    @Autowired
+    private IPaisService paisService;
 
     @GetMapping("/persona")
     public String index(Model model) {
@@ -43,9 +47,10 @@ public class PersonaController {
     
     @GetMapping("/personasN")
     public String crearPersona(Model model) {
+        List<Pais> listaPais = paisService.listCountry();
         model.addAttribute("personas",new Persona());
-        //persona.Service.savePerson(persona);
-        //return "modificarPersona";
+        model.addAttribute("paises",listaPais);
+        //personaService.savePerson(persona);       
         return "crear";
     }
     
