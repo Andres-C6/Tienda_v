@@ -22,6 +22,8 @@ public class UserService implements UserDetailsService{
     @Autowired
     public IPersonaService personaService;
 
+    
+    /*
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         Persona p= personaService.findByNombre(username);
@@ -29,6 +31,13 @@ public class UserService implements UserDetailsService{
         roles.add(new SimpleGrantedAuthority ("Admin"));
         UserDetails userDet = new User(p.getNombre(), p.getApellido1(), roles);
         return userDet;
+    }
+    */
+    @Override
+    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+        Persona persona= this.personaService.findByNombre(username);
+        UserPrincipal userPrincipal = new UserPrincipal(persona);
+        return userPrincipal;
     }
     
     
