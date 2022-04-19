@@ -5,6 +5,7 @@ import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 import com.tienda.tienda.entity.Persona;
 
+
 public interface IPersonaService {
 
     public List<Persona> getAllPerson();
@@ -16,5 +17,7 @@ public interface IPersonaService {
     public void delete(long id);
 
     public Persona findByNombre(String username);
+
+    
 
 }
